@@ -11,6 +11,7 @@
 #Testing Output folder
 .output/
 #Extension App-file
+*.zip
 *.app
 #Rapid Application Development File
 rad.json
@@ -20,3 +21,4 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+README_tut.md

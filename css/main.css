@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+ /*=======Main theme colors=======*/
+ --first-color: #0e2431;
+ --second-color: #6a59d1;
+ --third-color: #777;
+
+  /*=======Hover colors=======*/
+  --hover-color: #614fd0;
+
+  /*=======Background colors=======*/
+  --body-bg-color: #fefefe;
+  --card-bg-color: #fff;
+  --modal-bg-color:#fff;
+  --bg-transparent-color: rgba(0,0,0,0.1);
+  --bg-transparent-color-01: rgba(0,0,0,0.1);
+  --bg-transparent-color-02: rgba(106,89,2,0.1);
+  --liner-color: #d7d7d7;
+
+  /*=======Color Filter=======*/
+  --color-filter: invert(1);
+
+  /*=======Box shadow=======*/
+  --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%)
+
+  /*=======Font size=======*/
+  --small-font-size: 14px;
+  --normal-font-size: 16px;
+
+  /*=======Scroll bar colors=======*/
+  --scroll-bar-color: #c5cadf;
+  --scroll-bar-color: #70768a;
+  --scroll-bar-color: #454f6b;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+html{
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--first-color);
+    background: var(--body-bg-color);
+}
+
+.container{
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*=======Scroll to top button=======*/
+
+/*=======Light/Dark theme button=======*/
+
+/*=======Scroll bar=======*/
+
+/*=======Header=======*/
+.header{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    transition: .6s linear;
+}
+
+.header .logo{
+    color: var(--first-color);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.header__nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .6s linear;
+    height: calc(4rem + 1rem);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-link{
+    color: var(--first-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+}
+
+.nav-link:hover{
+    color: var(--second-color);
+}
+
+/*=======Home section=======*/
+
+/*=======Common styles for all sections=======*/
+
+/*=======About section=======*/
+
+/*=======Skills section=======*/
+
+/*=======Services section=======*/
+
+/*=======Portfolio section=======*/
+
+/*=======Get-in-touct=======*/
+
+/*=======Our Clients=======*/
+
+/*=======Contact section=======*/
+
+/*=======Footer=======*/
+
+/*=======Media query max-width 1300px=======*/
+@media screen and (max-width: 1300px){
+    .container{
+        padding: 0 16px;
+    }
+}
+
+/*=======Media query max-width 1070px=======*/
+@media screen and (max-width: 1070px){
+    /*=======Header navigation menu=======*/
+  
+    /*=======Home section=======*/
+  
+    /*=======About section=======*/
+  
+    /*=======Get-in-touct=======*/
+  
+    /*=======Our clients=======*/
+  
+    /*=======Contact section=======*/
+  
+    /*=======Footer=======*/
+  }
+  
+  /*=======Media query max-width 730px=======*/
+  @media screen and (max-width: 730px){
+    /*=======Common styles for all sections=======*/
+  
+    /*=======Home section=======*/
+  
+    /*=======Get-in-touch section=======*/
+  }
+        
