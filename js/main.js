@@ -1,4 +1,8 @@
 //Navigation bar effects on scroll
+window.addEventListener("scroll", function(){
+    const header = document.querySelector(".header");
+    window.scrollY > 1 ? header.classList.add("sticky") : header.classList.remove("sticky")
+})
 
 //Portfolio section - Modal
 
