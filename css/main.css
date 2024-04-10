@@ -261,7 +261,6 @@ body{
 
 .section{
     position: relative;
-    max-width: 1150px;
     width: 100%;
     margin: 0 auto;
     padding: 60px 20px 20px;
@@ -371,7 +370,6 @@ body{
     align-items: center;
 }
 
-/*=======Services section=======*/
 .skills-description{
     max-width: 700px;
     width: 100%;
@@ -389,10 +387,13 @@ body{
 
 .skills-info{
     max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    margin: 0 auto;
+}
+
+.education {
+    width: 32%;
 }
 
 .skills-info h4 label{
@@ -487,6 +488,112 @@ body{
 }
 .bar .php::before{
     width: 65%
+}
+
+.work-exp{
+    width: 100%;
+    max-width: 100%;
+}
+
+.experience-card-title{
+    font-size: 30px;
+    margin-bottom: 50px; 
+}
+
+.experience-card {
+    width: 32%;
+    background: var(--card-bg-color);
+    border-bottom: 3px solid var(--second-color);
+    padding: 35px;
+    border-radius: 6px;
+    box-shadow:  var(--box-shadow);
+    transition: .3s linear;
+}
+
+.experience-card  h3{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.experience-card  h5{
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.experience-card  span{
+    color: var(--third-color);
+}
+
+.experience-card  .hr{
+    width: 100%;
+    height: 2px;
+    background:  var(--liner-color);
+    margin: 10px 0 22px;
+}
+
+.experience-card p{
+    margin-top: 22px;
+}
+
+.experience-card:hover,
+.education-list .item:hover,
+.bar:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/*=======Services section=======*/
+.services > .flex-center {
+    flex-direction: column;
+}
+
+.services-description h3 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 20px; 
+}
+
+.service-card {
+    background: var(--card-bg-color);
+    border-bottom: 3px solid var(--second-color);
+    padding: 50px;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+}
+
+.service-card > i{
+    color: var(--second-color);
+    font-size:48px;
+    margin-bottom: 20px;
+}
+
+.service-card h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.learn-more-btn{
+    color: var(--third-color);
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.learn-more-btn i{
+    transition: .3s linear; 
+}
+
+.service-card:hover .learn-more-btn i{
+    transform: translateX(10px);
 }
 
 /*=======Portfolio section=======*/
