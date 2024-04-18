@@ -1,5 +1,5 @@
 //Navigation bar effects on scroll
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
     window.scrollY > 1 ? header.classList.add("sticky") : header.classList.remove("sticky")
 })
@@ -9,7 +9,7 @@ const serviceModal = document.querySelectorAll(".service-modal")
 const learnMoreBtn = document.querySelectorAll(".learn-more-btn")
 const modalCloseBtn = document.querySelectorAll(".modal-close-btn")
 
-const modal = function(modalClick){
+const modal = function (modalClick) {
     serviceModal[modalClick].classList.add("active")
 }
 
@@ -32,7 +32,7 @@ const portfolioModals = document.querySelectorAll(".portfolio-model")
 const imgCard = document.querySelectorAll(".img-card")
 const portfolioCloseBtn = document.querySelectorAll(".portfolio-close-btn")
 
-const portfolioModal = function(modalClick){
+const portfolioModal = function (modalClick) {
     portfolioModals[modalClick].classList.add("active")
 }
 
@@ -51,6 +51,19 @@ portfolioCloseBtn.forEach(button => {
 })
 
 //Our clients - Swiper
+let swiper = new Swiper(".client-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 
 //Website dark/light theme
 
@@ -64,4 +77,3 @@ portfolioCloseBtn.forEach(button => {
 //Common reveal options to create reveal animations
 
 //Target elements, and specify options to create reveal animations
-      
