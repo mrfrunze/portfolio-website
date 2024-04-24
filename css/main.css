@@ -16,7 +16,7 @@
   --modal-bg-color:#fff;
   --bg-transparent-color: rgba(0,0,0,0.1);
   --bg-transparent-color-01: rgba(0,0,0,0.1);
-  --bg-transparent-color-02: rgba(106,89,2,0.1);
+  --bg-transparent-color-02: rgba(106,89,209,0.1);
   --liner-color: #d7d7d7;
 
   /*=======Color Filter=======*/
@@ -909,6 +909,99 @@ body{
 }
 
 /*=======Contact section=======*/
+.contact .flex-center {
+    flex-direction: column;
+}
+
+.contact .inner-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-left h2{
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.contact-list li{
+    margin-bottom: 40px;
+}
+
+.contact-list h3{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-list h3 i{
+    color: var(--second-color);
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.contact-list span{
+    color: var(--third-color);
+    margin-left: 40px;
+}
+
+.contact-list span a{
+    color: var(--third-color);
+}
+
+.contact-right p{
+    color: var(--third-color);
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.contact-right p span{
+    display: block;
+    color: var(--first-color);
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea{
+    border: none;
+    color: var(--first-color);
+    background: var(--bg-transparent-color-02);
+    font-size: var(--normal-font-size);
+    margin-bottom: 20px;
+    padding: 15px 40px 40px 20px;
+    border-radius: 5px;
+}
+
+.contact-form textarea{
+    width: 100%;
+    resize: none;
+}
+
+
+::placeholder{
+    color: var(--first-color);
+}
+
+.contact-form .first-row input{
+    width: 100%;
+}
+
+.contact-form .second-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form .second-row input{
+    width: 48%;
+}
+
+.contact-form .btn{
+    border: none;
+    margin-top: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 
 /*=======Footer=======*/
 
