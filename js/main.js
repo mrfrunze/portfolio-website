@@ -68,8 +68,34 @@ let swiper = new Swiper(".client-swiper", {
 //Website dark/light theme
 
 //Scroll to top button
+const scrollToBtn = document.querySelector(".scrollToTop-btn")
+
+window.addEventListener("scroll", function() {
+    scrollToBtn.classList.toggle("active", this.window.scrollY > 500)
+})
+
+scrollToBtn.addEventListener("click", function(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+})
 
 //Navigation menu items active on page scroll
+window.addEventListener("scroll", function () {
+    const sections = document.querySelectorAll("section")
+    const scrollY = window.pageYOffset
+
+    sections.forEach(function(current) {
+        let sectionHight = current.offsetHeight
+        let sectionTop = current.offsetTop - 50;
+        let sectionId = current.getAttribute("id")
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHight){
+            document.querySelector(`.nav-item a[href*="${sectionId}"]`).classList.add("active")
+        } else {
+            document.querySelector(`.nav-item a[href*="${sectionId}"]`).classList.remove("active")
+        }
+    })
+})
 
 //Responsive navigation menu toggle
 
