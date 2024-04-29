@@ -66,6 +66,34 @@ let swiper = new Swiper(".client-swiper", {
 });
 
 //Website dark/light theme
+const themeBtn = document.querySelector(".theme-btn")
+
+themeBtn.addEventListener("click", function(){
+    document.body.classList.toggle("dark-theme")
+    themeBtn.classList.toggle("sun")
+
+    localStorage.setItem("saved-theme", getCurrentTheme())
+    localStorage.setItem("saved-icon", getCurrentIcon())
+})
+
+const getCurrentTheme = function() {
+    document.body.classList.contains("dark-theme") ? 
+        "dark" : "light"
+}
+
+const getCurrentIcon = function() {
+    themeBtn.classList.contains("sun") ? 
+        "sun" : "moon"
+}
+
+
+const savedTheme = localStorage.getItem("saved-theme")
+const savedIcon = localStorage.getItem("saved-icon")
+
+if(savedTheme){
+    document.body.classList[savedTheme === "dark" ? "add" : "remove"]("dark-theme");
+    themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("sun");
+}
 
 //Scroll to top button
 const scrollToBtn = document.querySelector(".scrollToTop-btn")
@@ -87,7 +115,7 @@ window.addEventListener("scroll", function () {
     sections.forEach(function(current) {
         let sectionHight = current.offsetHeight
         let sectionTop = current.offsetTop - 50;
-        let sectionId = current.getAttribute("id")
+        let      = current.getAttribute("id")
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHight){
             document.querySelector(`.nav-item a[href*="${sectionId}"]`).classList.add("active")
