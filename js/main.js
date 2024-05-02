@@ -115,7 +115,7 @@ window.addEventListener("scroll", function () {
     sections.forEach(function(current) {
         let sectionHight = current.offsetHeight
         let sectionTop = current.offsetTop - 50;
-        let      = current.getAttribute("id")
+        let sectionId = current.getAttribute("id")
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHight){
             document.querySelector(`.nav-item a[href*="${sectionId}"]`).classList.add("active")
