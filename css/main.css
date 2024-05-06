@@ -58,6 +58,14 @@
     --scroll-thumb-hover-color: #454f6b;
 }
 
+.dark-theme .nav-menu-btn{
+    background: url(../img/burger-white.svg) no-repeat center;
+}
+
+.dark-theme .nav-menu-btn{
+    background: url(../img/close-white.svg) no-repeat center;
+}
+
 *,
 *::before,
 *::after {
@@ -348,7 +356,7 @@ body {
     position: relative;
     width: 100%;
     margin: 0 auto;
-    padding: 60px 20px 20px;
+    padding: 60px 0px 20px;
 }
 
 .sub-section {
@@ -1248,18 +1256,32 @@ body {
 
     /*=======Home section=======*/
 
-    /* .home-info {
-        max-width: 90%;
-        width: 100%;
-    } */
-
     .home-info h2 {
         font-size: 45px;
     }
 
     .home-wrapper {
-        flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
+    }
+
+    .home-img img {
+        margin: auto;
+        transform: translate(0, 0);
+    }
+
+    .home-img {
+        order: 1;
+    }
+
+    .home-info {
+        order: 3;
+    }
+
+    .media-icons {
+        order: 2;
+        flex-direction: row;
+        gap: 30px;
     }
 
     /*=======About section=======*/
@@ -1299,25 +1321,75 @@ body {
     }
 
     .contact-card h2 {
-        font-size: 40px
+        font-size: 30px;
+        line-height: normal;
     }
 
-    /*=======Our clients=======*/
+    /*======= Skills slider =======*/
+    .our-clients .client-swiper .swiper-slide {
+        flex-direction: column;
+    }
+
+    .client-details {
+        text-align: center;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        font-size: 30px;
+        top: 50%;
+    }
 
     /*=======Contact section=======*/
+    .contact .inner-content {
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+    
 
     /*=======Footer=======*/
     .footer-container {
-        flex-wrap: wrap;
-        gap: 50px;
+       flex-direction: column;
     }
+
+    .footer-container .about,
+    .footer-container .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .footer-container .info ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-container .hr{
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.1);
+        margin: 10px 0 20px;
+    }
+
 }
 
 /*=======Media query max-width 730px=======*/
 @media screen and (max-width: 730px) {
     /*=======Common styles for all sections=======*/
+    .inner-title{
+        font-size: 45px;
+    }
+
+    .inner-second-title{
+        font-size: 22px;
+    }
 
     /*=======Home section=======*/
+
 
     /*=======Skills section=======*/
     .education {
@@ -1329,4 +1401,25 @@ body {
     }
 
     /*=======Get-in-touch section=======*/
+
+
+     /*======= Skills slider =======*/
+    .swiper-button-next, 
+    .swiper-button-prev {
+        display: none;
+    }
+
+     /*=======Contact section=======*/
+
+    .contact-form .second-row {
+        flex-direction: column;
+    }
+
+    .contact-form .second-row input{
+       width: 100%;
+    }
+
+    .contact-form input {
+        padding: 15px 40px 20px 20px;
+    }
 }
