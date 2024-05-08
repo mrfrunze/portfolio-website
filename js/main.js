@@ -156,8 +156,13 @@ ScrollReveal({
     delay: 100
 });
 //Target elements, and specify options to create reveal animations
-ScrollReveal().reveal(".home-info h2, .inner-title, .inner-second-title",  {delay: 500, origin: "left"});
-ScrollReveal().reveal(".home-info h3, .home-info p", {delay: 600, origin: "right"});
-ScrollReveal().reveal(".home-info-link", {delay: 700, origin: "bottom"});
+ScrollReveal().reveal(".home-info h2, .inner-title, .inner-second-title, .about-img, .contact-card",  {delay: 500, origin: "left"});
+ScrollReveal().reveal(".home-info h3, .home-info p, .about-info, .services-description h3", {delay: 600, origin: "right"});
+ScrollReveal().reveal(".home-info a", {delay: 700, origin: "bottom"});
 ScrollReveal().reveal(".media-icons a", {delay: 700, origin: "bottom", interval: 200});
 ScrollReveal().reveal(".home-img", {delay: 500, origin: "bottom"});
+ScrollReveal().reveal(".skills-description", {delay: 500, origin: "top"});
+ScrollReveal().reveal(".education, .experience-card, .services-container, .portfolio-img-card", {delay: 600, origin: "bottom", interval: 300});
+ScrollReveal().reveal(".contact-left h2, .contact-list li",  {delay: 400, origin: "left",  interval: 200});
+ScrollReveal().reveal(".contact-right p, .contact-form div, .contact-form button",  {delay: 600, origin: "top",  interval: 200});
+ScrollReveal().reveal(".footer-container, .footer-copyfight",  {delay: 700, distance: '0px', opacity: 0.2,  interval: 200});

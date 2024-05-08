@@ -100,6 +100,8 @@ html {
     scroll-behavior: smooth;
     font-size: 10px;
     font-family: "Poppins", sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -109,6 +111,8 @@ body {
     color: var(--first-color);
     font-size: 16px;
     background: var(--body-bg-color);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .container {
